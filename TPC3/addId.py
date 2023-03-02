@@ -1,7 +1,7 @@
 import json
 
 # Read the JSON file
-with open('dataset-extra1.json') as f:
+with open('dataset-extra1.json', "r", encoding="utf-8") as f:
     data = json.load(f)
 
 people = data["pessoas"]
@@ -15,5 +15,5 @@ for value in people:
     i+=1
 
 
-with open('dataset-extra1.json', 'w') as f:
-    json.dump(data, f, indent=4)
+with open('dataset-extra1.json', 'w', encoding="utf-8") as f:
+    json.dump(data, f, indent=4, ensure_ascii=False)
