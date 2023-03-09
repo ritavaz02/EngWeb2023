@@ -11,7 +11,7 @@ i = 0
 
 # Iterate over the dictionary keys and values to add the id field
 for value in people:
-    value['id'] = i
+    value['id'] = "p" + str(i)
     i+=1
 
 
