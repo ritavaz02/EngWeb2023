@@ -1,0 +1,78 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "nome": "Ricardo"
+        },
+        {
+            "id": "2",
+            "nome": "Rita"
+        },
+        {
+            "id": "3",
+            "nome": "Millena"
+        },
+        {
+            "id": "4",
+            "nome": "Vasco"
+        },
+        {
+            "id": "5",
+            "nome": "Francisco"
+        },
+        {
+            "id": "6",
+            "nome": "Rui"
+        },
+        {
+            "id": "7",
+            "nome": "Adriana"
+        },
+        {
+            "id": "8",
+            "nome": "Rodrigo"
+        }
+    ],
+    "tasks": [
+        {
+            "deadline": "01-04-2023",
+            "who": "Rita",
+            "description": "Ler livro xpto"
+        },
+        {
+            "deadline": "21-11-2023",
+            "who": "Ricardo",
+            "description": "Resolver 5 charadas"
+        },
+        {
+            "deadline": "27-03-2023",
+            "who": "Vasco",
+            "description": "Preparar festa anos"
+        },
+        {
+            "deadline": "16-04-2023",
+            "who": "Adriana",
+            "description": "Preparar festa de anos"
+        },
+        {
+            "deadline": "22-04-2023",
+            "who": "Francisco",
+            "description": "Aprender novo facto estranho"
+        },
+        {
+            "deadline": "21-04-2023",
+            "who": "Rui",
+            "description": "Comprar caderno fixolas novo"
+        },
+        {
+            "deadline": "18-04-2023",
+            "who": "Rodrigo",
+            "description": "Stalkear nova pessoa"
+        },
+        {
+            "deadline": "01-04-2023",
+            "who": "Millena",
+            "description": "Comprar nova peça de roupa ou maquilhagem"
+        }
+    ]
+}
