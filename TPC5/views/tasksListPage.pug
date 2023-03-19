@@ -1,0 +1,73 @@
+extends layout
+
+block content
+
+    - const yetToBeDoneList = []
+    - const alreadyDoneList = []
+
+    each ntask in taskList
+        if ntask.done === "0"
+          - yetToBeDoneList.push(ntask)
+        else
+          - alreadyDoneList.push(ntask)
+
+
+    .w3-card-4
+        header.w3-container.w3-teal
+            h1 Tasks
+           
+        .first-div
+            form.w3-container(method="POST")
+                fieldset
+                    legend Insertion Form
+                    label Build Date
+                    input.w3-input.w3-round(type="text" name="deadline" value=task.deadline)
+                    label Who
+                    input.w3-input.w3-round(type="text" name="who" value=task.who)
+                    label Description
+                    input.w3-input.w3-round(type="text" name="description" value=task.description)
+                    input(type="hidden" name="id" value="done")
+                br
+                button.w3-btn.w3-teal.w3-mb-2(type='submit') Register
+        p
+        .split-row 
+            .w3-row
+                .w3-half.w3-container
+                    h4 Tasks yet to be done
+                        table.w3-table-all
+                            thead  
+                                tr
+                                    th(style="font-size: 20px") Deadline
+                                    th(style="font-size: 20px") Who
+                                    th(style="font-size: 20px") Description
+                                    th(style="font-size: 20px") Actions
+                            tbody
+                                each task in yetToBeDoneList
+                                    tr
+                                        td(style="font-size: 15px") #{task.deadline}
+                                        td(style="font-size: 15px") #{task.who}
+                                        td(style="font-size: 15px") #{task.description}
+                                        td(style="font-size: 15px")
+                                            a(href="/tasks/edit/" + task.id) Edit &nbsp;&nbsp;
+                                            a(href="/tasks/done/" + task.id) Done
+
+                .w3-half.w3-container
+                    h3 Tasks Already Done
+                        table.w3-table-all
+                            thead  
+                                tr
+                                    th(style="font-size: 20px") Deadline
+                                    th(style="font-size: 20px") Who
+                                    th(style="font-size: 20px") Description
+                                    th(style="font-size: 20px") Actions
+                            tbody
+                                each task in alreadyDoneList
+                                    tr
+                                        td(style="font-size: 15px") #{task.deadline}
+                                        td(style="font-size: 15px") #{task.who}
+                                        td(style="font-size: 15px") #{task.description}
+                                        td(style="font-size: 15px") 
+                                            a(href="/tasks/delete/" + task.id) Delete
+   
+        footer.w3-container.w3-teal
+            h5 Generated in #{d}
